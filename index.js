@@ -29,8 +29,6 @@ app.use(morgan("combined"));
 
 // defining an endpoint to return an icebreaker
 app.get("/", async (req, res) => {
-  // This API call will request a space with the specified ID
-  console.log(req.query)
   const results = await getIcebreakers(req.query.teamName);
   res.send(results)
 });
