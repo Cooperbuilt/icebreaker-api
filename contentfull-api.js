@@ -70,7 +70,12 @@ async function getIcebreakers(teamName = "") {
       });
 
       if (Array.isArray(validIceBreakers) && validIceBreakers.length === 0) {
-        return "I'm sorry, there are no more icebreakers for your team";
+        return {
+          text: {
+            "en-US": "I'm sorry, there are no more icebreakers for your team",
+          },
+          id: "",
+        };
       }
 
       const {
